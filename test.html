@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech-with-Ease - Testing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background: white;
+            color: #667eea;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Tech-with-Ease</h1>
+        <p>Your Vue.js website is being prepared!</p>
+        <p>This is a test page to confirm GitHub Pages is working.</p>
+        <a href="#" class="btn">Coming Soon</a>
+        
+        <div style="margin-top: 50px;">
+            <h2>Status Check</h2>
+            <p>✅ GitHub Pages: Working</p>
+            <p>⏳ Vue.js App: Loading...</p>
+        </div>
+    </div>
+
+    <script>
+        console.log('GitHub Pages is working!');
+        // Test if JavaScript is working
+        setTimeout(() => {
+            document.querySelector('.btn').textContent = 'JavaScript Working!';
+        }, 2000);
+    </script>
+</body>
+</html>
