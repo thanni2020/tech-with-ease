@@ -1,5 +1,11 @@
 <script setup>
 import { ref } from 'vue'
+import webImage from '../assets/web.jpg'
+import frontendImage from '../assets/front.jpg'
+import fullstackImage from '../assets/fullstack.jpg'
+import dataAnalyticsImage from '../assets/data.jpg'
+import dataScienceImage from '../assets/machine.jpg'
+import graphicsDesignImage from '../assets/graphics.jpg'
 
 const popularCourses = ref([
   {
@@ -7,7 +13,7 @@ const popularCourses = ref([
     title: 'Web Design Fundamentals',
     shortDescription: 'Learn the basics of web design including HTML, CSS, responsive design, and UI/UX principles.',
     fullDescription: 'Learn the basics of web design including HTML, CSS, responsive design, and UI/UX principles. Master HTML5 structure, CSS3 styling, Bootstrap framework, and create stunning responsive websites. Build a professional portfolio showcasing your web design skills and modern design principles.',
-    image: '/tech-with-ease/web.jpg',
+    image: webImage,
     level: 'Beginner',
     duration: '6 weeks',
     price: 100000,
@@ -18,7 +24,7 @@ const popularCourses = ref([
     title: 'Frontend Development',
     shortDescription: 'Master modern frontend technologies including JavaScript, React, and advanced CSS frameworks.',
     fullDescription: 'Master modern frontend technologies including JavaScript, React, and advanced CSS frameworks. Learn JavaScript ES6+, React and Vue.js, state management, API integration, and performance optimization. Build interactive web applications with modern frontend tools and best practices.',
-    image: '/tech-with-ease/front.jpg',
+    image: frontendImage,
     level: 'Beginner to Intermediate',
     duration: '12 weeks',
     price: 250000,
@@ -29,7 +35,7 @@ const popularCourses = ref([
     title: 'Fullstack Development',
     shortDescription: 'Master both frontend and backend development with modern technologies.',
     fullDescription: 'Master both frontend and backend development with modern technologies like React, Node.js, and databases. Learn to build complete web applications from frontend to backend, including user authentication, API development, and deployment strategies. Work on real-world projects that showcase your skills to potential employers.',
-    image: '/tech-with-ease/fullstack.jpg',
+    image: fullstackImage,
     level: 'Intermediate to Advanced',
     duration: '16 weeks',
     price: 500000,
@@ -40,7 +46,7 @@ const popularCourses = ref([
     title: 'Data Analytics',
     shortDescription: 'Learn data analysis, visualization, and business intelligence using Excel, SQL, and Python.',
     fullDescription: 'Learn data analysis, visualization, and business intelligence using Excel, SQL, and Python. Master Excel advanced functions, Power BI, SQL databases, Python for analysis, and data visualization. Transform raw data into actionable business insights and create compelling data stories.',
-    image: '/tech-with-ease/data.jpg',
+    image: dataAnalyticsImage,
     level: 'Beginner to Intermediate',
     duration: '12 weeks',
     price: 250000,
@@ -51,7 +57,7 @@ const popularCourses = ref([
     title: 'Data Science',
     shortDescription: 'Learn Python, machine learning, and advanced data science techniques.',
     fullDescription: 'Learn Python, machine learning, and advanced data science techniques. Dive deep into statistical analysis, predictive modeling, and big data processing. Master tools like Pandas, NumPy, Scikit-learn, and TensorFlow while working on industry-relevant projects using real datasets and neural networks.',
-    image: '/tech-with-ease/machine.jpg',
+    image: dataScienceImage,
     level: 'Intermediate to Advanced',
     duration: '16 weeks',
     price: 400000,
@@ -62,7 +68,7 @@ const popularCourses = ref([
     title: 'Graphics Design',
     shortDescription: 'Master visual design, branding, and digital graphics creation.',
     fullDescription: 'Master visual design, branding, and digital graphics creation using industry-standard tools like Adobe Creative Suite. Learn typography, color theory, layout design, logo creation, and brand identity development. Create stunning visual content for web, print, and social media while building a professional portfolio.',
-    image: '/tech-with-ease/graphics.jpg',
+    image: graphicsDesignImage,
     level: 'Beginner to Intermediate',
     duration: '6 weeks',
     price: 100000,
