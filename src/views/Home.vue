@@ -11,77 +11,61 @@ const popularCourses = ref([
   {
     id: 1,
     title: 'Web Design Fundamentals',
-    shortDescription: 'Learn the basics of web design including HTML, CSS, responsive design, and UI/UX principles.',
-    fullDescription: 'Learn the basics of web design including HTML, CSS, responsive design, and UI/UX principles. Master HTML5 structure, CSS3 styling, Bootstrap framework, and create stunning responsive websites. Build a professional portfolio showcasing your web design skills and modern design principles.',
+    description: 'Learn the basics of web design including HTML, CSS, responsive design, and UI/UX principles.',
     image: webImage,
     level: 'Beginner',
     duration: '6 weeks',
-    price: 100000,
-    showFullDescription: false
+    price: 100000
   },
   {
     id: 2,
     title: 'Frontend Development',
-    shortDescription: 'Master modern frontend technologies including JavaScript, React, and advanced CSS frameworks.',
-    fullDescription: 'Master modern frontend technologies including JavaScript, React, and advanced CSS frameworks. Learn JavaScript ES6+, React and Vue.js, state management, API integration, and performance optimization. Build interactive web applications with modern frontend tools and best practices.',
+    description: 'Master modern frontend technologies including JavaScript, React, and advanced CSS frameworks.',
     image: frontendImage,
     level: 'Beginner to Intermediate',
     duration: '12 weeks',
-    price: 250000,
-    showFullDescription: false
+    price: 250000
   },
   {
     id: 3,
     title: 'Fullstack Development',
-    shortDescription: 'Master both frontend and backend development with modern technologies.',
-    fullDescription: 'Master both frontend and backend development with modern technologies like React, Node.js, and databases. Learn to build complete web applications from frontend to backend, including user authentication, API development, and deployment strategies. Work on real-world projects that showcase your skills to potential employers.',
+    description: 'Master both frontend and backend development with modern technologies.',
     image: fullstackImage,
     level: 'Intermediate to Advanced',
     duration: '16 weeks',
-    price: 500000,
-    showFullDescription: false
+    price: 500000
   },
   {
     id: 4,
     title: 'Data Analytics',
-    shortDescription: 'Learn data analysis, visualization, and business intelligence using Excel, SQL, and Python.',
-    fullDescription: 'Learn data analysis, visualization, and business intelligence using Excel, SQL, and Python. Master Excel advanced functions, Power BI, SQL databases, Python for analysis, and data visualization. Transform raw data into actionable business insights and create compelling data stories.',
+    description: 'Learn data analysis, visualization, and business intelligence using Excel, SQL, and Python.',
     image: dataAnalyticsImage,
     level: 'Beginner to Intermediate',
     duration: '12 weeks',
-    price: 250000,
-    showFullDescription: false
+    price: 250000
   },
   {
     id: 5,
     title: 'Data Science',
-    shortDescription: 'Learn Python, machine learning, and advanced data science techniques.',
-    fullDescription: 'Learn Python, machine learning, and advanced data science techniques. Dive deep into statistical analysis, predictive modeling, and big data processing. Master tools like Pandas, NumPy, Scikit-learn, and TensorFlow while working on industry-relevant projects using real datasets and neural networks.',
+    description: 'Learn Python, machine learning, and advanced data science techniques.',
     image: dataScienceImage,
     level: 'Intermediate to Advanced',
     duration: '16 weeks',
-    price: 400000,
-    showFullDescription: false
+    price: 400000
   },
   {
     id: 6,
     title: 'Graphics Design',
-    shortDescription: 'Master visual design, branding, and digital graphics creation.',
-    fullDescription: 'Master visual design, branding, and digital graphics creation using industry-standard tools like Adobe Creative Suite. Learn typography, color theory, layout design, logo creation, and brand identity development. Create stunning visual content for web, print, and social media while building a professional portfolio.',
+    description: 'Master visual design, branding, and digital graphics creation.',
     image: graphicsDesignImage,
     level: 'Beginner to Intermediate',
     duration: '6 weeks',
-    price: 100000,
-    showFullDescription: false
+    price: 100000
   }
 ])
 
 const showCourseDetails = ref(false)
 const selectedCourse = ref({})
-
-const toggleDescription = (course) => {
-  course.showFullDescription = !course.showFullDescription
-}
 
 const openCourseDetails = (course) => {
   selectedCourse.value = course
@@ -258,16 +242,9 @@ const downloadBrochure = (courseTitle) => {
                 <h3>{{ course.title }}</h3>
                 <span class="course-duration"><i class="fas fa-clock"></i> {{ course.duration }}</span>
               </div>
-              <p class="course-description" :class="{ expanded: course.showFullDescription }">
-                {{ course.showFullDescription ? course.fullDescription : course.shortDescription }}
+              <p class="course-description">
+                {{ course.description }}
               </p>
-              <button 
-                v-if="course.fullDescription !== course.shortDescription"
-                @click="toggleDescription(course)" 
-                class="read-more-btn"
-              >
-                {{ course.showFullDescription ? 'Show Less' : 'Read More' }}
-              </button>
 
               <div class="course-footer">
                 <span class="price">₦{{ course.price.toLocaleString() }}</span>
@@ -664,30 +641,6 @@ const downloadBrochure = (courseTitle) => {
   margin-bottom: 1rem;
   transition: all 0.3s ease;
 }
-
-.course-description.expanded {
-  margin-bottom: 1rem;
-}
-
-.read-more-btn {
-  background: none;
-  border: none;
-  color: #667eea;
-  font-weight: 500;
-  cursor: pointer;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-}
-
-.read-more-btn:hover {
-  color: #5a67d8;
-  text-decoration: underline;
-}
-
-
-
-
 
 .btn-learn-more {
   background: #667eea;
