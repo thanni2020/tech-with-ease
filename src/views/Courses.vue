@@ -173,10 +173,10 @@
             
             <div class="modal-detail-box">
               <div class="modal-detail-icon">
-                <i class="fas fa-dollar-sign"></i>
+                <i class="fas fa-money-bill-wave"></i>
               </div>
               <div class="modal-detail-label">Price</div>
-              <div class="modal-detail-value">${{ selectedCourse?.price }}</div>
+              <div class="modal-detail-value">₦{{ selectedCourse?.price?.toLocaleString() }}</div>
             </div>
             
             <div class="modal-detail-box">
