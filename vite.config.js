@@ -5,7 +5,7 @@ import { resolve } from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: './',
+  base: '/tech-with-ease/',
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')
