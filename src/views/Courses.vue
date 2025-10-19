@@ -207,6 +207,14 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 
+// Import course images
+import webImage from '../assets/web.jpg'
+import frontImage from '../assets/front.jpg'
+import fullstackImage from '../assets/fullstack.jpg'
+import dataImage from '../assets/data.jpg'
+import machineImage from '../assets/machine.jpg'
+import graphicsImage from '../assets/graphics.jpg'
+
 const activeFilter = ref('All')
 const categories = ['All', 'Web Development', 'Data Science', 'Data Analytics', 'Graphics Design']
 
@@ -216,7 +224,7 @@ const courses = ref([
     title: 'Web Design Fundamentals',
     description: 'Learn the basics of web design including HTML, CSS, responsive design, and UI/UX principles.',
     category: 'Web Development',
-    image: '/web.jpg',
+    image: webImage,
     level: 'Beginner',
     duration: '6 weeks',
     students: '3,240',
@@ -229,7 +237,7 @@ const courses = ref([
     title: 'Frontend Development',
     description: 'Master modern frontend technologies including JavaScript, React, and advanced CSS frameworks.',
     category: 'Web Development',
-    image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+    image: frontImage,
     level: 'Beginner to Intermediate',
     duration: '12 weeks',
     students: '2,890',
@@ -242,7 +250,7 @@ const courses = ref([
     title: 'Fullstack Development',
     description: 'Complete web development course covering both frontend and backend technologies.',
     category: 'Web Development',
-    image: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+    image: fullstackImage,
     level: 'Intermediate to Advanced',
     duration: '16 weeks',
     students: '2,340',
@@ -255,7 +263,7 @@ const courses = ref([
     title: 'Data Analytics',
     description: 'Learn data analysis, visualization, and business intelligence using Excel, SQL, and Python.',
     category: 'Data Analytics',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+    image: dataImage,
     level: 'Beginner to Intermediate',
     duration: '12 weeks',
     students: '1,987',
@@ -268,7 +276,7 @@ const courses = ref([
     title: 'Data Science',
     description: 'Advanced data science program covering machine learning, AI, and predictive analytics.',
     category: 'Data Science',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+    image: machineImage,
     level: 'Intermediate to Advanced',
     duration: '16 weeks',
     students: '1,856',
@@ -281,7 +289,7 @@ const courses = ref([
     title: 'Graphics Design',
     description: 'Master visual design, branding, and digital graphics using Adobe Creative Suite.',
     category: 'Graphics Design',
-    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+    image: graphicsImage,
     level: 'Beginner to Intermediate',
     duration: '6 weeks',
     students: '2,156',
