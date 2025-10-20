@@ -403,6 +403,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
+/* CACHE BUST v1.0.1 - Mobile Blue Fix - Oct 20 2025 */
 .courses-page {
   padding-top: 80px;
 }
@@ -547,8 +548,8 @@ onMounted(() => {
 }
 
 .course-duration {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: white;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  color: white !important;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -557,13 +558,14 @@ onMounted(() => {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3) !important;
   transition: all 0.3s ease;
 }
 
 .course-duration:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4) !important;
+  background: linear-gradient(135deg, #1e40af, #1d4ed8) !important;
 }
 
 .course-duration i {
@@ -992,6 +994,8 @@ onMounted(() => {
     align-self: flex-start;
     font-size: 0.8rem;
     padding: 0.4rem 0.8rem;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3) !important;
   }
   
   .benefits-grid {
