@@ -61,7 +61,7 @@
 
 <style scoped>
 .footer {
-  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   color: white;
   margin-top: auto;
 }

@@ -409,7 +409,7 @@ onMounted(() => {
 
 /* Page Header */
 .page-header {
-  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   color: white;
   padding: 4rem 2rem;
   text-align: center;
@@ -458,13 +458,13 @@ onMounted(() => {
 }
 
 .filter-btn:hover {
-  border-color: #4f46e5;
-  color: #4f46e5;
+  border-color: #2563eb;
+  color: #2563eb;
 }
 
 .filter-btn.active {
-  background: #4f46e5;
-  border-color: #4f46e5;
+  background: #2563eb;
+  border-color: #2563eb;
   color: white;
 }
 
@@ -681,7 +681,7 @@ onMounted(() => {
 .benefit-icon {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, #4f46e5, #3730a3);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -783,7 +783,7 @@ onMounted(() => {
   height: 250px;
   border-radius: 20px 20px 0 0;
   overflow: hidden;
-  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
 }
 
 .modal-course-image {

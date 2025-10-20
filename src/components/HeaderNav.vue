@@ -85,7 +85,7 @@ const goToCourse = (courseId) => {
 
 <style scoped>
 .header {
-  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
@@ -237,7 +237,7 @@ const goToCourse = (courseId) => {
 }
 
 .dropdown-item:hover {
-  background: #4f46e5;
+  background: #2563eb;
   color: white;
   transform: translateX(5px);
 }
@@ -262,7 +262,7 @@ const goToCourse = (courseId) => {
     left: -100%;
     top: 70px;
     flex-direction: column;
-    background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
     width: 100%;
     text-align: center;
     transition: 0.3s;

@@ -446,7 +446,7 @@ const getCourseFeatures = (course) => {
 
 .btn-secondary:hover {
   background: white;
-  color: #4f46e5;
+  color: #2563eb;
 }
 
 .hero-stats {
@@ -526,7 +526,7 @@ const getCourseFeatures = (course) => {
 .feature-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #4f46e5, #3730a3);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -628,7 +628,7 @@ const getCourseFeatures = (course) => {
 
 .course-duration {
   background: #f8f9fa;
-  color: #4f46e5;
+  color: #2563eb;
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
   font-size: 0.8rem;
@@ -647,7 +647,7 @@ const getCourseFeatures = (course) => {
 }
 
 .btn-learn-more {
-  background: #4f46e5;
+  background: #2563eb;
   color: white;
   border: none;
   padding: 0.7rem 1.2rem;
@@ -664,7 +664,7 @@ const getCourseFeatures = (course) => {
 }
 
 .btn-learn-more:hover {
-  background: #3730a3;
+  background: #1d4ed8;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
 }
@@ -741,7 +741,7 @@ const getCourseFeatures = (course) => {
   height: 250px;
   border-radius: 20px 20px 0 0;
   overflow: hidden;
-  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
 }
 
 .modal-course-image {
@@ -813,7 +813,7 @@ const getCourseFeatures = (course) => {
   background: #f8f9fc;
   padding: 0.8rem 1rem;
   border-radius: 10px;
-  border-left: 4px solid #4f46e5;
+  border-left: 4px solid #2563eb;
   font-size: 0.95rem;
   color: #555;
   display: flex;
@@ -863,7 +863,7 @@ const getCourseFeatures = (course) => {
 
 .modal-detail-icon {
   font-size: 2rem;
-  color: #4f46e5;
+  color: #2563eb;
   margin-bottom: 0.5rem;
 }
 
@@ -907,7 +907,7 @@ const getCourseFeatures = (course) => {
 }
 
 .modal-btn-primary {
-  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   color: white;
 }
 
@@ -923,7 +923,7 @@ const getCourseFeatures = (course) => {
 }
 
 .modal-btn-secondary:hover {
-  background: #4f46e5;
+  background: #2563eb;
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
@@ -931,8 +931,8 @@ const getCourseFeatures = (course) => {
 
 .modal-btn-secondary {
   background: #f8f9fa;
-  color: #4f46e5;
-  border: 2px solid #4f46e5;
+  color: #2563eb;
+  border: 2px solid #2563eb;
 }
 
 .modal-btn-secondary:hover {
@@ -1009,7 +1009,7 @@ const getCourseFeatures = (course) => {
 .price {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #4f46e5;
+  color: #2563eb;
 }
 
 
@@ -1020,7 +1020,7 @@ const getCourseFeatures = (course) => {
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   padding: 5rem 2rem;
   color: white;
   text-align: center;

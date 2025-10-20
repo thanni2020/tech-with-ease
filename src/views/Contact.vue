@@ -367,7 +367,7 @@ const toggleFaq = (id) => {
 
 /* Page Header */
 .page-header {
-  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   color: white;
   padding: 4rem 2rem;
   text-align: center;
@@ -456,7 +456,7 @@ const toggleFaq = (id) => {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #4f46e5;
+  border-color: #2563eb;
 }
 
 .form-group input.error,
@@ -490,7 +490,7 @@ const toggleFaq = (id) => {
 }
 
 .submit-btn {
-  background: linear-gradient(135deg, #4f46e5, #3730a3);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: white;
   padding: 1rem 2rem;
   border: none;
@@ -571,7 +571,7 @@ const toggleFaq = (id) => {
 .info-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #4f46e5, #3730a3);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -721,7 +721,7 @@ const toggleFaq = (id) => {
 }
 
 .map-placeholder {
-  background: linear-gradient(135deg, #4f46e5, #3730a3);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   border-radius: 20px;
   padding: 4rem 2rem;
   text-align: center;

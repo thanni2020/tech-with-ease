@@ -212,7 +212,7 @@ const testimonials = ref([
 
 /* Page Header */
 .page-header {
-  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   color: white;
   padding: 4rem 2rem;
   text-align: center;
@@ -311,7 +311,7 @@ const testimonials = ref([
 .mv-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #4f46e5, #3730a3);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -382,7 +382,7 @@ const testimonials = ref([
 .team-image {
   width: 120px;
   height: 120px;
-  background: linear-gradient(135deg, #4f46e5, #3730a3);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -425,7 +425,7 @@ const testimonials = ref([
 
 .skill-tag {
   background: #f8f9fa;
-  color: #4f46e5;
+  color: #2563eb;
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
   font-size: 0.8rem;
@@ -446,13 +446,13 @@ const testimonials = ref([
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #4f46e5;
+  color: #2563eb;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .social-link:hover {
-  background: #4f46e5;
+  background: #2563eb;
   color: white;
 }
 
@@ -512,7 +512,7 @@ const testimonials = ref([
 .author-avatar {
   width: 50px;
   height: 50px;
-  background: #4f46e5;
+  background: #2563eb;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -546,7 +546,7 @@ const testimonials = ref([
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   padding: 5rem 2rem;
   color: white;
   text-align: center;

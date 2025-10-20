@@ -320,7 +320,7 @@ onMounted(() => {
 
 /* Course Hero Section */
 .course-hero {
-  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   color: white;
   padding: 4rem 0;
 }
@@ -390,7 +390,7 @@ onMounted(() => {
 
 .btn-enroll {
   background: white;
-  color: #4f46e5;
+  color: #2563eb;
   padding: 1rem 2rem;
   border: none;
   border-radius: 50px;
@@ -469,7 +469,7 @@ onMounted(() => {
 }
 
 .feature-item i {
-  color: #4f46e5;
+  color: #2563eb;
   font-size: 1.2rem;
 }
 
@@ -498,7 +498,7 @@ onMounted(() => {
 .week-number {
   width: 40px;
   height: 40px;
-  background: #4f46e5;
+  background: #2563eb;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -557,7 +557,7 @@ onMounted(() => {
 .amount {
   font-size: 3rem;
   font-weight: 700;
-  color: #4f46e5;
+  color: #2563eb;
 }
 
 .course-info {
@@ -574,7 +574,7 @@ onMounted(() => {
 }
 
 .info-item i {
-  color: #4f46e5;
+  color: #2563eb;
   width: 16px;
 }
 
@@ -584,7 +584,7 @@ onMounted(() => {
 
 .btn-enroll-main {
   width: 100%;
-  background: linear-gradient(135deg, #4f46e5, #3730a3);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: white;
   padding: 1.2rem;
   border: none;
@@ -618,7 +618,7 @@ onMounted(() => {
 
 .loading-content i {
   font-size: 3rem;
-  color: #4f46e5;
+  color: #2563eb;
   margin-bottom: 1rem;
 }
 
