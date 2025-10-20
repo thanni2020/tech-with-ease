@@ -358,6 +358,7 @@ const getCourseFeatures = (course) => {
 </template>
 
 <style scoped>
+/* CACHE BUST v1.0.2 - Home Banner Blue Fix - Oct 20 2025 */
 .home {
   padding-top: 80px; /* Account for fixed header */
 }
@@ -365,7 +366,7 @@ const getCourseFeatures = (course) => {
 /* Hero Section */
 .hero {
   /* Using dataanalytics.jpg as the background */
-  background: linear-gradient(rgba(79, 70, 229, 0.8), rgba(55, 48, 163, 0.8)), 
+  background: linear-gradient(rgba(37, 99, 235, 0.8), rgba(29, 78, 216, 0.8)), 
               url('../assets/dataanalytics.jpg');
   background-size: cover;
   background-position: center;
@@ -599,8 +600,8 @@ const getCourseFeatures = (course) => {
 }
 
 .course-level {
-  background: rgba(79, 70, 229, 0.9);
-  color: white;
+  background: rgba(37, 99, 235, 0.9) !important;
+  color: white !important;
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
   font-size: 0.8rem;
