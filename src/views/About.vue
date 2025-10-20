@@ -26,7 +26,7 @@
             </p>
           </div>
           <div class="story-image">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tech-with-Ease students learning" class="story-img" />
+            <img :src="aboutImage" alt="Tech-with-Ease students learning" class="story-img" />
           </div>
         </div>
       </div>
@@ -154,6 +154,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import aboutImage from '../assets/frontenddevelopment.jpeg'
 
 const teamMembers = ref([
   {
@@ -211,7 +212,7 @@ const testimonials = ref([
 
 /* Page Header */
 .page-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
   color: white;
   padding: 4rem 2rem;
   text-align: center;
@@ -310,7 +311,7 @@ const testimonials = ref([
 .mv-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #4f46e5, #3730a3);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -381,7 +382,7 @@ const testimonials = ref([
 .team-image {
   width: 120px;
   height: 120px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #4f46e5, #3730a3);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -424,7 +425,7 @@ const testimonials = ref([
 
 .skill-tag {
   background: #f8f9fa;
-  color: #667eea;
+  color: #4f46e5;
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
   font-size: 0.8rem;
@@ -445,13 +446,13 @@ const testimonials = ref([
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #667eea;
+  color: #4f46e5;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .social-link:hover {
-  background: #667eea;
+  background: #4f46e5;
   color: white;
 }
 
@@ -511,7 +512,7 @@ const testimonials = ref([
 .author-avatar {
   width: 50px;
   height: 50px;
-  background: #667eea;
+  background: #4f46e5;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -545,7 +546,7 @@ const testimonials = ref([
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
   padding: 5rem 2rem;
   color: white;
   text-align: center;

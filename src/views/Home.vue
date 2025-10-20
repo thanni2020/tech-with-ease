@@ -1,17 +1,20 @@
 <script setup>
 import { ref } from 'vue'
-import webImage from '../assets/web.jpg'
-import frontendImage from '../assets/front.jpg'
-import fullstackImage from '../assets/fullstack.jpg'
-import dataAnalyticsImage from '../assets/data.jpg'
-import dataScienceImage from '../assets/machine.jpg'
-import graphicsDesignImage from '../assets/graphics.jpg'
+import { useRouter } from 'vue-router'
+import webImage from '../assets/webdesign.jpg'
+import frontendImage from '../assets/frontenddevelopment.jpeg'
+import fullstackImage from '../assets/fullstackweb.jpg'
+import dataAnalyticsImage from '../assets/dataanalytics.jpg'
+import dataScienceImage from '../assets/datascience2.jpg'
+import graphicsDesignImage from '../assets/graphicsdesign2.jpg'
+
+const router = useRouter()
 
 const popularCourses = ref([
   {
     id: 1,
     title: 'Web Design Fundamentals',
-    description: 'Learn the basics of web design including HTML, CSS, responsive design, and UI/UX principles.',
+    description: 'Learn the basics of web design including HTML, CSS, responsive design, and version control with Git.',
     image: webImage,
     level: 'Beginner',
     duration: '6 weeks',
@@ -20,7 +23,7 @@ const popularCourses = ref([
   {
     id: 2,
     title: 'Frontend Development',
-    description: 'Master modern frontend technologies including JavaScript, React, and advanced CSS frameworks.',
+    description: 'Master modern frontend technologies including HTML, CSS, JavaScript, and Vue.js frameworks.',
     image: frontendImage,
     level: 'Beginner to Intermediate',
     duration: '12 weeks',
@@ -67,6 +70,13 @@ const popularCourses = ref([
 const showCourseDetails = ref(false)
 const selectedCourse = ref({})
 
+// Show only first 3 courses on home page
+const displayedCourses = popularCourses.value.slice(0, 3)
+
+const goToCourseDetail = (course) => {
+  router.push(`/course/${course.id}`)
+}
+
 const openCourseDetails = (course) => {
   selectedCourse.value = course
   showCourseDetails.value = true
@@ -82,6 +92,14 @@ const closeCourseDetails = () => {
 const getCourseFeatures = (course) => {
   // Return appropriate features based on course type
   const features = {
+    'Frontend Development': [
+      'HTML5 & CSS3 Fundamentals',
+      'JavaScript ES6+ Programming',
+      'Vue.js Framework Mastery',
+      'Responsive Web Design',
+      'API Integration & State Management',
+      'Modern Frontend Development Tools'
+    ],
     'Fullstack Development': [
       'Frontend Development with React/Vue',
       'Backend Development with Node.js',
@@ -109,21 +127,6 @@ const getCourseFeatures = (course) => {
   }
   return features[course.title] || []
 }
-
-const downloadBrochure = (courseTitle) => {
-  // Simulate brochure download
-  const link = document.createElement('a')
-  link.href = '#' // In real implementation, this would be the actual brochure URL
-  link.download = `${courseTitle.replace(/\s+/g, '-').toLowerCase()}-brochure.pdf`
-  
-  // Show download notification
-  alert(`Downloading ${courseTitle} brochure...`)
-  
-  // In a real implementation, you would:
-  // 1. Track the download event for analytics
-  // 2. Serve the actual PDF file
-  // 3. Show a proper notification/toast instead of alert
-}
 </script>
 
 <template>
@@ -134,7 +137,7 @@ const downloadBrochure = (courseTitle) => {
         <div class="hero-text">
           <h1 class="hero-title">
             Master <span class="highlight">Technology</span><br>
-            With Ease & Excellence
+            with Ease & Excellence
           </h1>
           <p class="hero-subtitle">
             Learn from industry experts and join thousands of successful graduates.
@@ -230,7 +233,7 @@ const downloadBrochure = (courseTitle) => {
         </div>
         
         <div class="courses-grid">
-          <div v-for="course in popularCourses" :key="course.id" class="course-card">
+          <div v-for="course in displayedCourses" :key="course.id" class="course-card">
             <div class="course-image">
               <img :src="course.image" :alt="course.title" />
               <div class="course-overlay">
@@ -248,7 +251,7 @@ const downloadBrochure = (courseTitle) => {
 
               <div class="course-footer">
                 <span class="price">₦{{ course.price.toLocaleString() }}</span>
-                <button @click="openCourseDetails(course)" class="btn-learn-more">
+                <button @click="goToCourseDetail(course)" class="btn-learn-more">
                   <i class="fas fa-info-circle"></i> Learn More
                 </button>
               </div>
@@ -361,8 +364,9 @@ const downloadBrochure = (courseTitle) => {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8)), 
-              url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  /* Using dataanalytics.jpg as the background */
+  background: linear-gradient(rgba(79, 70, 229, 0.8), rgba(55, 48, 163, 0.8)), 
+              url('../assets/dataanalytics.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -442,7 +446,7 @@ const downloadBrochure = (courseTitle) => {
 
 .btn-secondary:hover {
   background: white;
-  color: #667eea;
+  color: #4f46e5;
 }
 
 .hero-stats {
@@ -522,7 +526,7 @@ const downloadBrochure = (courseTitle) => {
 .feature-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #4f46e5, #3730a3);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -595,7 +599,7 @@ const downloadBrochure = (courseTitle) => {
 }
 
 .course-level {
-  background: rgba(102, 126, 234, 0.9);
+  background: rgba(79, 70, 229, 0.9);
   color: white;
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
@@ -624,7 +628,7 @@ const downloadBrochure = (courseTitle) => {
 
 .course-duration {
   background: #f8f9fa;
-  color: #667eea;
+  color: #4f46e5;
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
   font-size: 0.8rem;
@@ -643,7 +647,7 @@ const downloadBrochure = (courseTitle) => {
 }
 
 .btn-learn-more {
-  background: #667eea;
+  background: #4f46e5;
   color: white;
   border: none;
   padding: 0.7rem 1.2rem;
@@ -660,9 +664,9 @@ const downloadBrochure = (courseTitle) => {
 }
 
 .btn-learn-more:hover {
-  background: #5a67d8;
+  background: #3730a3;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
 }
 
 
@@ -737,7 +741,7 @@ const downloadBrochure = (courseTitle) => {
   height: 250px;
   border-radius: 20px 20px 0 0;
   overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
 }
 
 .modal-course-image {
@@ -809,7 +813,7 @@ const downloadBrochure = (courseTitle) => {
   background: #f8f9fc;
   padding: 0.8rem 1rem;
   border-radius: 10px;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid #4f46e5;
   font-size: 0.95rem;
   color: #555;
   display: flex;
@@ -854,12 +858,12 @@ const downloadBrochure = (courseTitle) => {
 
 .modal-detail-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.1);
 }
 
 .modal-detail-icon {
   font-size: 2rem;
-  color: #667eea;
+  color: #4f46e5;
   margin-bottom: 0.5rem;
 }
 
@@ -903,39 +907,39 @@ const downloadBrochure = (courseTitle) => {
 }
 
 .modal-btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
   color: white;
 }
 
 .modal-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
 }
 
 .modal-btn-secondary {
   background: #f8f9fa;
-  color: #667eea;
-  border: 2px solid #667eea;
+  color: #2563eb;
+  border: 2px solid #2563eb;
 }
 
 .modal-btn-secondary:hover {
-  background: #667eea;
+  background: #4f46e5;
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
 }
 
 .modal-btn-secondary {
   background: #f8f9fa;
-  color: #667eea;
-  border: 2px solid #667eea;
+  color: #4f46e5;
+  border: 2px solid #4f46e5;
 }
 
 .modal-btn-secondary:hover {
-  background: #667eea;
+  background: #2563eb;
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
 }
 
 /* Responsive Design */
@@ -997,6 +1001,7 @@ const downloadBrochure = (courseTitle) => {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   padding-top: 1rem;
   border-top: 1px solid #e9ecef;
 }
@@ -1004,7 +1009,7 @@ const downloadBrochure = (courseTitle) => {
 .price {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #667eea;
+  color: #4f46e5;
 }
 
 
@@ -1015,7 +1020,7 @@ const downloadBrochure = (courseTitle) => {
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
   padding: 5rem 2rem;
   color: white;
   text-align: center;

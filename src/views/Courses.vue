@@ -53,7 +53,7 @@
                 <div class="price">
                   <span class="current-price">₦{{ course.price.toLocaleString() }}</span>
                 </div>
-                <button @click="openCourseDetails(course)" class="btn-learn-more">
+                <button @click="goToCourseDetail(course)" class="btn-learn-more">
                   <i class="fas fa-info-circle"></i> Learn More
                 </button>
               </div>
@@ -193,10 +193,6 @@
               <i class="fas fa-user-plus"></i>
               Enroll Now
             </router-link>
-            <button @click="downloadBrochure(selectedCourse?.title)" class="modal-btn modal-btn-secondary">
-              <i class="fas fa-download"></i>
-              Download Brochure
-            </button>
           </div>
         </div>
       </div>
@@ -206,14 +202,18 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 
 // Import course images
-import webImage from '../assets/web.jpg'
-import frontImage from '../assets/front.jpg'
-import fullstackImage from '../assets/fullstack.jpg'
-import dataImage from '../assets/data.jpg'
-import machineImage from '../assets/machine.jpg'
-import graphicsImage from '../assets/graphics.jpg'
+import webImage from '../assets/webdesign.jpg'
+import frontImage from '../assets/frontenddevelopment.jpeg'
+import fullstackImage from '../assets/fullstackweb.jpg'
+import dataImage from '../assets/dataanalytics.jpg'
+import machineImage from '../assets/datascience2.jpg'
+import graphicsImage from '../assets/graphicsdesign2.jpg'
+
+// Router setup
+const router = useRouter()
 
 const activeFilter = ref('All')
 const categories = ['All', 'Web Development', 'Data Science', 'Data Analytics', 'Graphics Design']
@@ -222,7 +222,7 @@ const courses = ref([
   {
     id: 1,
     title: 'Web Design Fundamentals',
-    description: 'Learn the basics of web design including HTML, CSS, responsive design, and UI/UX principles.',
+    description: 'Learn the basics of web design including HTML, CSS, responsive design, and version control with Git.',
     category: 'Web Development',
     image: webImage,
     level: 'Beginner',
@@ -230,12 +230,12 @@ const courses = ref([
     students: '3,240',
     rating: '4.7',
     price: 100000,
-    features: ['HTML5 & CSS3', 'Responsive Design', 'Bootstrap Framework', 'UI/UX Principles', 'Portfolio Development']
+    features: ['HTML5 & CSS3', 'Responsive Design', 'Bootstrap Framework', 'Version Control with Git', 'Portfolio Development']
   },
   {
     id: 2,
     title: 'Frontend Development',
-    description: 'Master modern frontend technologies including JavaScript, React, and advanced CSS frameworks.',
+    description: 'Master modern frontend technologies including HTML, CSS, JavaScript, and Vue.js frameworks.',
     category: 'Web Development',
     image: frontImage,
     level: 'Beginner to Intermediate',
@@ -243,7 +243,7 @@ const courses = ref([
     students: '2,890',
     rating: '4.8',
     price: 250000,
-    features: ['JavaScript ES6+', 'React & Vue.js', 'State Management', 'API Integration', 'Performance Optimization']
+    features: ['HTML5 & CSS3', 'JavaScript ES6+', 'Vue.js Framework', 'State Management', 'API Integration']
   },
   {
     id: 3,
@@ -326,6 +326,11 @@ const closeCourseDetails = () => {
   document.body.style.overflow = 'auto'
 }
 
+// Navigate to course detail page
+const goToCourseDetail = (course) => {
+  router.push(`/course/${course.id}`)
+}
+
 const getCourseFeatures = (course) => {
   if (!course) return []
   
@@ -336,14 +341,17 @@ const getCourseFeatures = (course) => {
       'Responsive web design principles',
       'Mobile-first design approach',
       'Cross-browser compatibility',
-      'Web accessibility standards',
+      'Version control with Git and GitHub',
       'Portfolio website creation'
     ],
     'Frontend Development': [
+      'HTML5 structure and semantics',
+      'CSS3 styling and responsive design',
       'JavaScript ES6+ fundamentals',
-      'React.js component development',
+      'DOM manipulation and events',
       'Vue.js framework mastery',
-      'State management (Redux/Vuex)',
+      'Component-based development',
+      'State management with Vuex',
       'RESTful API integration',
       'Frontend testing strategies',
       'Performance optimization techniques'
@@ -389,21 +397,6 @@ const getCourseFeatures = (course) => {
   return featuresMap[course.title] || course.features || []
 }
 
-const downloadBrochure = (courseTitle) => {
-  // Simulate brochure download
-  const link = document.createElement('a')
-  link.href = '#' // In real implementation, this would be the actual brochure URL
-  link.download = `${courseTitle.replace(/\s+/g, '-').toLowerCase()}-brochure.pdf`
-  
-  // Show download notification
-  alert(`Downloading ${courseTitle} brochure...`)
-  
-  // In a real implementation, you would:
-  // 1. Track the download event for analytics
-  // 2. Serve the actual PDF file
-  // 3. Show a proper notification/toast instead of alert
-}
-
 onMounted(() => {
   // Add any initialization logic here
 })
@@ -416,7 +409,7 @@ onMounted(() => {
 
 /* Page Header */
 .page-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
   color: white;
   padding: 4rem 2rem;
   text-align: center;
@@ -465,13 +458,13 @@ onMounted(() => {
 }
 
 .filter-btn:hover {
-  border-color: #667eea;
-  color: #667eea;
+  border-color: #4f46e5;
+  color: #4f46e5;
 }
 
 .filter-btn.active {
-  background: #667eea;
-  border-color: #667eea;
+  background: #4f46e5;
+  border-color: #4f46e5;
   color: white;
 }
 
@@ -524,7 +517,7 @@ onMounted(() => {
 }
 
 .course-level {
-  background: rgba(102, 126, 234, 0.9);
+  background: rgba(37, 99, 235, 0.9);
   color: white;
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
@@ -554,16 +547,28 @@ onMounted(() => {
 }
 
 .course-duration {
-  background: #f8f9fa;
-  color: #667eea;
-  padding: 0.3rem 0.8rem;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  font-weight: 500;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
   white-space: nowrap;
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.4rem;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  transition: all 0.3s ease;
+}
+
+.course-duration:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.course-duration i {
+  font-size: 0.9rem;
+  opacity: 0.9;
 }
 
 .course-content p {
@@ -605,6 +610,7 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   padding-top: 1.5rem;
   border-top: 1px solid #e9ecef;
 }
@@ -675,7 +681,7 @@ onMounted(() => {
 .benefit-icon {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #4f46e5, #3730a3);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -777,7 +783,7 @@ onMounted(() => {
   height: 250px;
   border-radius: 20px 20px 0 0;
   overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
 }
 
 .modal-course-image {
@@ -969,6 +975,23 @@ onMounted(() => {
   .course-details {
     flex-direction: column;
     gap: 0.5rem;
+  }
+  
+  .course-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  
+  .course-header h3 {
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+  
+  .course-duration {
+    align-self: flex-start;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
   }
   
   .benefits-grid {

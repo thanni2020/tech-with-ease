@@ -71,12 +71,12 @@
                 <label for="course">Interested Course</label>
                 <select id="course" v-model="form.course">
                   <option value="">Select a course</option>
-                  <option value="full-stack">Full Stack Web Development</option>
-                  <option value="data-science">Data Science & Analytics</option>
-                  <option value="mobile-dev">Mobile App Development</option>
-                  <option value="cloud-computing">Cloud Computing & DevOps</option>
-                  <option value="ai-ml">AI & Machine Learning</option>
-                  <option value="cybersecurity">Cybersecurity</option>
+                  <option value="web-design-fundamentals">Web Design Fundamentals</option>
+                  <option value="frontend-development">Frontend Development</option>
+                  <option value="fullstack-development">Fullstack Development</option>
+                  <option value="data-analytics">Data Analytics</option>
+                  <option value="data-science">Data Science</option>
+                  <option value="graphics-design">Graphics Design</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -367,7 +367,7 @@ const toggleFaq = (id) => {
 
 /* Page Header */
 .page-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
   color: white;
   padding: 4rem 2rem;
   text-align: center;
@@ -456,7 +456,7 @@ const toggleFaq = (id) => {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #4f46e5;
 }
 
 .form-group input.error,
@@ -490,7 +490,7 @@ const toggleFaq = (id) => {
 }
 
 .submit-btn {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #4f46e5, #3730a3);
   color: white;
   padding: 1rem 2rem;
   border: none;
@@ -571,7 +571,7 @@ const toggleFaq = (id) => {
 .info-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #4f46e5, #3730a3);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -721,7 +721,7 @@ const toggleFaq = (id) => {
 }
 
 .map-placeholder {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #4f46e5, #3730a3);
   border-radius: 20px;
   padding: 4rem 2rem;
   text-align: center;
